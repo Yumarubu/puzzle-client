@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class CountDown : MonoBehaviour
 {
     [SerializeField] Text CountDownText;
+    [SerializeField] Text StartText;
+
     float CountDownTime = 3;
-    string StartMessage = "Start!";
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartText.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -22,15 +24,10 @@ public class CountDown : MonoBehaviour
 
         if (CountDownTime < 1)
         {
-            StartComment();
-            //CountDownText.gameObject.SetActive(false);
+            CountDownText.gameObject.SetActive(false);
+            StartText.gameObject.SetActive(true);
         }
-
+        
         CountDownText.text = CountDownTime.ToString("F0");
-    }
-
-    public void StartComment()
-    {
-        CountDownText.text = "Start!";
     }
 }
