@@ -2,35 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stage1Manager : MonoBehaviour
+public class ActionButton : MonoBehaviour
 {
-    [SerializeField] GameObject BlockList;
-    [SerializeField] GameObject BlockOffButton;
     [SerializeField] GameObject BlockButoon;
     [SerializeField] GameObject AllGrid;
 
     // Start is called before the first frame update
     void Start()
     {
-        BlockOffButton.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    public void OpenBlockList()
-    {
-        BlockList.SetActive(true);
-        BlockOffButton.SetActive(true);
-    }
-
-    public void CloseBlockList() 
-    {
-        BlockOffButton.SetActive(false);
-        BlockList.SetActive(false);
     }
 
     public void ActionMode()
