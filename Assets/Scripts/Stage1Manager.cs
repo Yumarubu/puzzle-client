@@ -9,10 +9,18 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject BlockButoon;
     [SerializeField] GameObject AllGrid;
 
+    [SerializeField] GameObject block_I;
+    [SerializeField] GameObject block_T;
+    [SerializeField] GameObject block_L;
+
     // Start is called before the first frame update
     void Start()
     {
         BlockOffButton.SetActive(false);
+
+        block_I.SetActive(false);
+        block_T.SetActive(false);
+        block_L.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,12 +33,18 @@ public class Stage1Manager : MonoBehaviour
     {
         BlockList.SetActive(true);
         BlockOffButton.SetActive(true);
+        block_I.SetActive(true);
+        block_T.SetActive(true);
+        block_L.SetActive(true);
     }
 
     public void CloseBlockList() 
     {
         BlockOffButton.SetActive(false);
         BlockList.SetActive(false);
+        //block_I.SetActive(false);
+        //block_T.SetActive(false);
+        //block_L.SetActive(false);
     }
 
     public void ActionMode()
