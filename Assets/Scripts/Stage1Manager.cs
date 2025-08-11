@@ -52,4 +52,9 @@ public class Stage1Manager : MonoBehaviour
         BlockButoon.SetActive(false);
         AllGrid.SetActive(false);
     }
+
+    public void RotetionButton()
+    {
+        //block_I.transform.rotation(90.0f, 0.0f, 0.0f);
+    }
 }
