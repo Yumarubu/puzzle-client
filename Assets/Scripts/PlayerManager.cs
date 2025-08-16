@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    Rigidbody2D rigidbody2;
+    float speed;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbody2 = GetComponent<Rigidbody2D>();
     }
 
     public enum DIRECTION_TIPE
@@ -47,11 +51,17 @@ public class PlayerManager : MonoBehaviour
         switch(direction)
         {
             case DIRECTION_TIPE.STOP:
+                speed = 0;
                 break;
+
             case DIRECTION_TIPE.RIGHT:
+                speed = 3;
                 break;
+
             case DIRECTION_TIPE.LEFT:
+                speed = -3;
                 break;
         }
+        rigidbody2.velocity = new Vector2(speed, rigidbody2.velocity.y);
     }
 }
