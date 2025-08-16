@@ -42,7 +42,12 @@ public class PlayerManager : MonoBehaviour
         {
             //左に動く
             direction = DIRECTION_TIPE.LEFT;
+        }
 
+        // スペースが押されたらJumpさせる
+        if(Input.GetKey("spece"))
+        {
+            // Jump()
         }
     }
 
@@ -56,10 +61,12 @@ public class PlayerManager : MonoBehaviour
 
             case DIRECTION_TIPE.RIGHT:
                 speed = 3;
+                transform.localScale = new Vector3(1, 1, 1);
                 break;
 
             case DIRECTION_TIPE.LEFT:
                 speed = -3;
+                transform.localScale = new Vector3(-1, 1, 1);
                 break;
         }
         rigidbody2.velocity = new Vector2(speed, rigidbody2.velocity.y);
