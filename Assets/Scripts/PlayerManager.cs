@@ -48,6 +48,10 @@ public class PlayerManager : MonoBehaviour
         {
             case DIRECTION_TIPE.STOP:
                 break;
+            case DIRECTION_TIPE.RIGHT:
+                break;
+            case DIRECTION_TIPE.LEFT:
+                break;
         }
     }
 }
