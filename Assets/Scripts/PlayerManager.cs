@@ -93,4 +93,12 @@ public class PlayerManager : MonoBehaviour
         return Physics2D.Linecast(leftStartPoint,endPoint, blockLayer)
             || Physics2D.Linecast(rightStartPoint,endPoint,blockLayer);
     }
+
+    void OnTriggerEnter2D(Collider2D collsion)
+    {
+        if(collsion.gameObject.tag == "trap")
+        {
+            Debug.Log("ゲームオーバー");
+        }
+    }
 }
