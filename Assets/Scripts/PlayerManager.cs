@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] LayerMask blockLayer;
+    [SerializeField] Stage1Manager stage1Manager;
 
     Rigidbody2D rigidbody2;
     float speed;
@@ -99,6 +100,7 @@ public class PlayerManager : MonoBehaviour
         if(collsion.gameObject.tag == "trap")
         {
             Debug.Log("ゲームオーバー");
+            stage1Manager.GameOver();
         }
         if(collsion.gameObject.tag == "Finish")
         {

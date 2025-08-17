@@ -13,6 +13,9 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject block_T;
     [SerializeField] GameObject block_L;
 
+    //ゲームオーバー専用
+    [SerializeField] GameObject GameOverText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,5 +59,10 @@ public class Stage1Manager : MonoBehaviour
     public void RotetionButton()
     {
         //block_I.transform.rotation(90.0f, 0.0f, 0.0f);
+    }
+
+    public void GameOver()
+    {
+        GameOverText.SetActive(true);
     }
 }
