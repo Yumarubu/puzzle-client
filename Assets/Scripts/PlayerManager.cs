@@ -100,5 +100,9 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.Log("ゲームオーバー");
         }
+        if(collsion.gameObject.tag == "Finish")
+        {
+            Debug.Log("ゲームクリア");
+        }
     }
 }
