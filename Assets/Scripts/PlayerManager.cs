@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField] LayerMask blockLayer;
+
     Rigidbody2D rigidbody2;
     float speed;
+    float jumpPower = 400;
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +48,9 @@ public class PlayerManager : MonoBehaviour
         }
 
         // スペースが押されたらJumpさせる
-        if(Input.GetKey("spece"))
+        if(IsGround() && Input.GetKeyDown("space"))
         {
-            // Jump()
+            Jump();
         }
     }
 
@@ -70,5 +73,24 @@ public class PlayerManager : MonoBehaviour
                 break;
         }
         rigidbody2.velocity = new Vector2(speed, rigidbody2.velocity.y);
+    }
+
+    void Jump()
+    {
+        // 上に力を加える
+        rigidbody2.AddForce(Vector2.up * jumpPower);
+        Debug.Log("Jump");
+    }
+
+    bool IsGround()
+    {
+        //始点と終点を作る
+        Vector3 leftStartPoint = transform.position - Vector3.right * 0.2f;
+        Vector3 rightStartPoint = transform.position + Vector3.right * 0.2f;
+        Vector3 endPoint = transform.position - Vector3.up * 0.1f;
+        Debug.DrawLine(leftStartPoint, endPoint);
+        Debug.DrawLine(rightStartPoint, endPoint);
+        return Physics2D.Linecast(leftStartPoint,endPoint, blockLayer)
+            || Physics2D.Linecast(rightStartPoint,endPoint,blockLayer);
     }
 }
