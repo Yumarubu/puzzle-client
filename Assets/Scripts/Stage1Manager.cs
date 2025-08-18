@@ -15,6 +15,7 @@ public class Stage1Manager : MonoBehaviour
 
     //ゲームオーバー専用
     [SerializeField] GameObject GameOverText;
+    [SerializeField] GameObject GameOverBackGround;
 
     //ゲームクリア専用
 
@@ -30,6 +31,12 @@ public class Stage1Manager : MonoBehaviour
         block_I.SetActive(false);
         block_T.SetActive(false);
         block_L.SetActive(false);
+
+        GameOverText.SetActive(false);
+        GameOverBackGround.SetActive(false);
+
+        RetryButton.SetActive(false);
+        BackMenuButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -70,5 +77,9 @@ public class Stage1Manager : MonoBehaviour
     public void GameOver()
     {
         GameOverText.SetActive(true);
+        GameOverBackGround.SetActive(true);
+
+        RetryButton.SetActive(true);
+        BackMenuButton.SetActive(true);
     }
 }
