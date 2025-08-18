@@ -16,6 +16,12 @@ public class Stage1Manager : MonoBehaviour
     //ゲームオーバー専用
     [SerializeField] GameObject GameOverText;
 
+    //ゲームクリア専用
+
+    //ゲームクリアとゲームオーバー両方専用
+    [SerializeField] GameObject RetryButton;
+    [SerializeField] GameObject BackMenuButton;
+
     // Start is called before the first frame update
     void Start()
     {
