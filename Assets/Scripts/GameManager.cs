@@ -21,4 +21,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("PlaySelectScene");
     }
+
+    public void RetryGameScene()
+    {
+        Scene thisScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(thisScene.name);
+    }
 }
