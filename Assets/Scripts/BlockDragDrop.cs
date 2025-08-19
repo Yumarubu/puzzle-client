@@ -24,5 +24,8 @@ public class BlockDragDrop : MonoBehaviour
         Vector3 currentScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
         Vector3 currentPosition = Camera.main.ScreenToWorldPoint(currentScreenPoint) + this.offset;
         transform.position = currentPosition;
+        Debug.Log("Move now");
     }
+
+
 }

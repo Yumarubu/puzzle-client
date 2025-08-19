@@ -71,7 +71,8 @@ public class Stage1Manager : MonoBehaviour
 
     public void RotetionButton()
     {
-        //block_I.transform.rotation(90.0f, 0.0f, 0.0f);
+        block_I.transform.Rotate(0.0f, 0.0f, -90.0f);
+        block_T.transform.Rotate(0.0f, 0.0f, -90.0f);
     }
 
     public void GameOver()
