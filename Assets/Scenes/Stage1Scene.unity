@@ -3473,6 +3473,7 @@ MonoBehaviour:
   GameOverBackGround: {fileID: 1391561288}
   RetryButton: {fileID: 2006066259}
   BackMenuButton: {fileID: 1466276813}
+  listClose: 0
 --- !u!4 &1040358130
 Transform:
   m_ObjectHideFlags: 0
@@ -6120,9 +6121,10 @@ GameObject:
   - component: {fileID: 1588589719}
   - component: {fileID: 1588589718}
   - component: {fileID: 1588589720}
+  - component: {fileID: 1588589721}
   m_Layer: 0
   m_Name: BlockList
-  m_TagString: Untagged
+  m_TagString: BlockList
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6206,6 +6208,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97edf22eef95df44b661af80e50ef5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1588589721
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588589717}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1596169184
 GameObject:
   m_ObjectHideFlags: 0

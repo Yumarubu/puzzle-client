@@ -26,6 +26,7 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject BackMenuButton;
 
     GameObject testBlock;
+    public bool listClose = false;
 
     // Start is called before the first frame update
     void Start()
@@ -65,16 +66,18 @@ public class Stage1Manager : MonoBehaviour
 
     public void CloseBlockList() 
     {
+        listClose = true;
+
         BlockOffButton.SetActive(false);
         BlockList.SetActive(false);
 
-        testBlock.SetActive(false);
-        PrefabBlockL.SetActive(false);
+        //testBlock.SetActive(false);
+        
         //block_I.SetActive(false);
         //block_T.SetActive(false);
         //block_L.SetActive(false);
     }
-
+    
     public void ActionMode()
     {
         BlockButoon.SetActive(false);

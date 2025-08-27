@@ -36,4 +36,14 @@ public class BlockDragDrop : MonoBehaviour
     {
         BlockList.SetActive(true);
     }
+
+    void BlockListCollision(Collision2D collision2D)
+    {
+        Stage1Manager stage1Manager;
+        stage1Manager = GetComponent<Stage1Manager>();
+        if(collision2D.gameObject.CompareTag("BlockList") && stage1Manager.listClose == true)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }
