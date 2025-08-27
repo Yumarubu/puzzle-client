@@ -1420,6 +1420,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -314532321332968506, guid: 6c08accce9d686e44aee51b743651411, type: 3}
+      propertyPath: BlockList
+      value: 
+      objectReference: {fileID: 1588589717}
     - target: {fileID: 156472231927251009, guid: 6c08accce9d686e44aee51b743651411, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1478,7 +1482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7231889781653318308, guid: 6c08accce9d686e44aee51b743651411, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7244595310897261624, guid: 6c08accce9d686e44aee51b743651411, type: 3}
       propertyPath: m_Layer
@@ -3464,6 +3468,7 @@ MonoBehaviour:
   block_I: {fileID: 1184654964}
   block_T: {fileID: 1151912390}
   block_L: {fileID: 1355181203}
+  PrefabBlockL: {fileID: 7231889781653318308, guid: 6c08accce9d686e44aee51b743651411, type: 3}
   GameOverText: {fileID: 1909915412}
   GameOverBackGround: {fileID: 1391561288}
   RetryButton: {fileID: 2006066259}
@@ -3799,6 +3804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2405cf69f0d505545809fe0b9995bd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockList: {fileID: 0}
 --- !u!212 &1151912394
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3958,6 +3964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2405cf69f0d505545809fe0b9995bd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockList: {fileID: 0}
 --- !u!212 &1184654967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4961,6 +4968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2405cf69f0d505545809fe0b9995bd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockList: {fileID: 0}
 --- !u!212 &1355181207
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5941,7 +5949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7231889781653318308, guid: 0c71bfec7db8a4044bda36f2c2dec5b6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7244595310897261624, guid: 0c71bfec7db8a4044bda36f2c2dec5b6, type: 3}
       propertyPath: m_Layer
@@ -6476,6 +6484,10 @@ PrefabInstance:
     - target: {fileID: 7231889781653318308, guid: a2bbf9e3f41af3b43a2ed561d61e704e, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231889781653318308, guid: a2bbf9e3f41af3b43a2ed561d61e704e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7244595310897261624, guid: a2bbf9e3f41af3b43a2ed561d61e704e, type: 3}
       propertyPath: m_Layer

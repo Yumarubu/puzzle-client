@@ -13,6 +13,8 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject block_T;
     [SerializeField] GameObject block_L;
 
+    [SerializeField] GameObject PrefabBlockL;
+
     //ゲームオーバー専用
     [SerializeField] GameObject GameOverText;
     [SerializeField] GameObject GameOverBackGround;
@@ -23,6 +25,8 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject RetryButton;
     [SerializeField] GameObject BackMenuButton;
 
+    GameObject testBlock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,8 @@ public class Stage1Manager : MonoBehaviour
         block_I.SetActive(false);
         block_T.SetActive(false);
         block_L.SetActive(false);
+        testBlock = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
+        testBlock.SetActive(false);
 
         GameOverText.SetActive(false);
         GameOverBackGround.SetActive(false);
@@ -49,15 +55,21 @@ public class Stage1Manager : MonoBehaviour
     {
         BlockList.SetActive(true);
         BlockOffButton.SetActive(true);
-        block_I.SetActive(true);
-        block_T.SetActive(true);
-        block_L.SetActive(true);
+
+        testBlock.SetActive(true);
+        PrefabBlockL.SetActive(true);
+        //block_I.SetActive(true);
+        //block_T.SetActive(true);
+        //block_L.SetActive(true);
     }
 
     public void CloseBlockList() 
     {
         BlockOffButton.SetActive(false);
         BlockList.SetActive(false);
+
+        testBlock.SetActive(false);
+        PrefabBlockL.SetActive(false);
         //block_I.SetActive(false);
         //block_T.SetActive(false);
         //block_L.SetActive(false);
