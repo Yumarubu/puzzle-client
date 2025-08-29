@@ -86,8 +86,8 @@ public class PlayerManager : MonoBehaviour
     bool IsGround()
     {
         //始点と終点を作る
-        Vector3 leftStartPoint = transform.position - Vector3.right * 0.2f;
-        Vector3 rightStartPoint = transform.position + Vector3.right * 0.2f;
+        Vector3 leftStartPoint = transform.position - Vector3.right * 0.1f;
+        Vector3 rightStartPoint = transform.position + Vector3.right * 0.1f;
         Vector3 endPoint = transform.position - Vector3.up * 0.1f;
         Debug.DrawLine(leftStartPoint, endPoint);
         Debug.DrawLine(rightStartPoint, endPoint);

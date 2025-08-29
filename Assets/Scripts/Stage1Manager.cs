@@ -34,7 +34,7 @@ public class Stage1Manager : MonoBehaviour
         BlockOffButton.SetActive(false);
 
         block_I.SetActive(false);
-        block_T.SetActive(false);
+        //block_T.SetActive(false);
         block_L.SetActive(false);
         testBlock = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
         testBlock.SetActive(false);

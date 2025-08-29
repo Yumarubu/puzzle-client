@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2451184622248939869}
   - component: {fileID: 959252704288064544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5809825362361656850}
   - component: {fileID: 3419059500501942768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,9 +181,9 @@ GameObject:
   - component: {fileID: 9109644619465910704}
   - component: {fileID: 8778637249712115219}
   - component: {fileID: 2164242444751895917}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: block_L
-  m_TagString: Block
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,7 +278,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0025571585, y: 0}
+  m_Offset: {x: -0.0076717734, y: 0.0153436065}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -289,7 +289,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.969086, y: 1}
+  m_Size: {x: 3.0100021, y: 1.0306869}
   m_EdgeRadius: 0
 --- !u!61 &2164242444751895917
 BoxCollider2D:
@@ -323,7 +323,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1, y: 0.50377893}
+  m_Offset: {x: 1, y: 0.53190863}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -334,7 +334,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.95397}
+  m_Size: {x: 1, y: 2.0102293}
   m_EdgeRadius: 0
 --- !u!1 &7244595310897261624
 GameObject:
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519019683742278896}
   - component: {fileID: 2562043997254189333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630204811107784652}
   - component: {fileID: 4205536908203749327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
