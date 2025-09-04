@@ -20,6 +20,7 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject GameOverBackGround;
 
     //ゲームクリア専用
+    [SerializeField] GameObject GameClearText;
 
     //ゲームクリアとゲームオーバー両方専用
     [SerializeField] GameObject RetryButton;
@@ -41,6 +42,8 @@ public class Stage1Manager : MonoBehaviour
 
         GameOverText.SetActive(false);
         GameOverBackGround.SetActive(false);
+
+        GameClearText.SetActive(false);
 
         RetryButton.SetActive(false);
         BackMenuButton.SetActive(false);
@@ -97,5 +100,11 @@ public class Stage1Manager : MonoBehaviour
 
         RetryButton.SetActive(true);
         BackMenuButton.SetActive(true);
+    }
+
+    public void GameClear()
+    {
+        GameClearText.SetActive(true);
+        Invoke("ResultScene", 2.5f);
     }
 }

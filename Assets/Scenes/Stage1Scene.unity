@@ -2879,7 +2879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &782240236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3750,6 +3750,7 @@ MonoBehaviour:
   PrefabBlockL: {fileID: 7231889781653318308, guid: 6c08accce9d686e44aee51b743651411, type: 3}
   GameOverText: {fileID: 1909915412}
   GameOverBackGround: {fileID: 1391561288}
+  GameClearText: {fileID: 782240235}
   RetryButton: {fileID: 2006066259}
   BackMenuButton: {fileID: 1466276813}
   listClose: 0
