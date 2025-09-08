@@ -105,6 +105,7 @@ public class PlayerManager : MonoBehaviour
         if(collsion.gameObject.tag == "Finish")
         {
             Debug.Log("ƒQ[ƒ€ƒNƒŠƒA");
+            stage1Manager.GameClear();
         }
     }
 }

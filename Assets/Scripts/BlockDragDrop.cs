@@ -7,7 +7,7 @@ public class BlockDragDrop : MonoBehaviour
     GameObject BlockList;
     private Vector3 offset;
     private Vector3 screenPoint;
-    bool isUse;
+    bool isUse = false;
 
     // Start is called before the first frame update
     void Start()

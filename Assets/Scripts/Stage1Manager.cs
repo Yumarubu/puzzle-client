@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stage1Manager : MonoBehaviour
 {
@@ -105,6 +106,11 @@ public class Stage1Manager : MonoBehaviour
     public void GameClear()
     {
         GameClearText.SetActive(true);
-        Invoke("ResultScene", 2.5f);
+        ResuleScene();
+    }
+
+    public void ResuleScene()
+    {
+        SceneManager.LoadScene("ResultScene");
     }
 }
