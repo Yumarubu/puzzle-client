@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,13 +12,10 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject BlockButoon;
     [SerializeField] GameObject AllGrid;
 
-    [SerializeField] GameObject block_I;
-    [SerializeField] GameObject block_T;
-    [SerializeField] GameObject block_L;
-
-    [SerializeField] GameObject PrefabBlockI;
-    [SerializeField] GameObject PrefabBlockT;
     [SerializeField] GameObject PrefabBlockL;
+    //GameObject PrefabBlockI = GameObject.Find("block_I");
+    //GameObject PrefabBlockT;
+    //GameObject PrefabBlockL;
 
     //ゲームオーバー専用
     [SerializeField] GameObject GameOverText;
@@ -29,9 +28,14 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject RetryButton;
     [SerializeField] GameObject BackMenuButton;
 
-    GameObject testBlock0;
-    GameObject testBlock1;
-    GameObject testBlock2;
+    private List<GameObject> blockList;
+
+    //↓これを修正しとくこと
+    GameObject blocks;
+    
+    //GameObject testBlock0;
+    //GameObject testBlock1;
+    //GameObject testBlock2;
     public bool listClose = false;
 
     // Start is called before the first frame update
@@ -39,14 +43,16 @@ public class Stage1Manager : MonoBehaviour
     {
         BlockOffButton.SetActive(false);
 
-        block_I.SetActive(false);
-        //block_T.SetActive(false);
-        block_L.SetActive(false);
-        testBlock0 = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
-        testBlock1 = Instantiate(PrefabBlockT, new Vector3(-2.5f, 3.48f, 0.0f), Quaternion.identity);
-        testBlock0.SetActive(false);
-        testBlock1.SetActive(false);
+        blocks = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
+        //testBlock0 = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
+        //testBlock1 = Instantiate(PrefabBlockT, new Vector3(-2.5f, 3.48f, 0.0f), Quaternion.identity);
+        //testBlock0.SetActive(false);
+        //testBlock1.SetActive(false);
 
+        //↓これを修正しとくこと
+        //blockList = 
+
+        blocks.SetActive(false);
         GameOverText.SetActive(false);
         GameOverBackGround.SetActive(false);
 
@@ -67,9 +73,10 @@ public class Stage1Manager : MonoBehaviour
         BlockList.SetActive(true);
         BlockOffButton.SetActive(true);
 
-        testBlock0.SetActive(true);
-        testBlock1.SetActive(true);
-        PrefabBlockL.SetActive(true);
+        blocks.SetActive(true);
+        //testBlock0.SetActive(true);
+        //testBlock1.SetActive(true);
+        //PrefabBlockL.SetActive(true);
         //block_I.SetActive(true);
         //block_T.SetActive(true);
         //block_L.SetActive(true);
@@ -82,8 +89,9 @@ public class Stage1Manager : MonoBehaviour
         BlockOffButton.SetActive(false);
         BlockList.SetActive(false);
 
+        blocks.SetActive(false);
         //testBlock.SetActive(false);
-        
+
         //block_I.SetActive(false);
         //block_T.SetActive(false);
         //block_L.SetActive(false);
@@ -97,8 +105,8 @@ public class Stage1Manager : MonoBehaviour
 
     public void RotetionButton()
     {
-        block_I.transform.Rotate(0.0f, 0.0f, -90.0f);
-        block_T.transform.Rotate(0.0f, 0.0f, -90.0f);
+    //    block_I.transform.Rotate(0.0f, 0.0f, -90.0f);
+    //    block_T.transform.Rotate(0.0f, 0.0f, -90.0f);
     }
 
     public void GameOver()
