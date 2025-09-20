@@ -37,7 +37,7 @@ public class Stage1Manager : MonoBehaviour
     //GameObject testBlock1;
     //GameObject testBlock2;
     public bool listClose = false;
-    BlockDragDrop blockDragDrop;
+    BlockDragDrop blockDragDrop = new BlockDragDrop();
 
     // Start is called before the first frame update
     void Start()

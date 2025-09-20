@@ -10,19 +10,23 @@ public class CountDown : MonoBehaviour
 
     float CountDownTime = 3;
 
+    //SE
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         StartText.gameObject.SetActive(false);
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         CountDownTime -= Time.deltaTime;
+        //audioSource.PlayOneShot(countDownSE);
 
-        if (CountDownTime < 1)
+        if (CountDownTime < 0)
         {
             CountDownText.gameObject.SetActive(false);
             StartText.gameObject.SetActive(true);

@@ -7,12 +7,14 @@ public class StartText : MonoBehaviour
 {
     [SerializeField] Text startText;
     float time = 0;
-    bool startTextJuage;
+
+    //SE
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class StartText : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (time > 1.0f)
+        if (time > 2.0f)
         { 
             startText.gameObject.SetActive(false);
         }
