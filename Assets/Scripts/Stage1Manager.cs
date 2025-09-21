@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Unity.Collections.AllocatorManager;
 
 public class Stage1Manager : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Stage1Manager : MonoBehaviour
     [SerializeField] GameObject AllGrid;
 
     [SerializeField] GameObject PrefabBlockL;
+    [SerializeField] GameObject PrefabBlockT;
+    [SerializeField] GameObject PrefabBlockI;
+
     //GameObject PrefabBlockI = GameObject.Find("block_I");
     //GameObject PrefabBlockT;
     //GameObject PrefabBlockL;
@@ -30,9 +34,11 @@ public class Stage1Manager : MonoBehaviour
 
     private List<GameObject> blockList;
 
-    //↓これを修正しとくこと
+    //本来、この書き方はNG。これからはリスト化を使うこと
     GameObject blocks;
-    
+    GameObject block1;
+    GameObject block2;
+
     //GameObject testBlock0;
     //GameObject testBlock1;
     //GameObject testBlock2;
@@ -47,6 +53,8 @@ public class Stage1Manager : MonoBehaviour
 
         //blocks = GameObject.Find("block_L");
         blocks = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
+        block1 = Instantiate(PrefabBlockT, new Vector3(5.5f, 3.48f, 0.0f), Quaternion.identity);
+        block2 = Instantiate(PrefabBlockI, new Vector3(-2.5f, 3.48f, 0.0f), Quaternion.identity);
         //testBlock0 = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
         //testBlock1 = Instantiate(PrefabBlockT, new Vector3(-2.5f, 3.48f, 0.0f), Quaternion.identity);
         //testBlock0.SetActive(false);
@@ -56,6 +64,8 @@ public class Stage1Manager : MonoBehaviour
         //blockList = 
 
         blocks.SetActive(false);
+        block1.SetActive(false);
+        block2.SetActive(false);
         GameOverText.SetActive(false);
         GameOverBackGround.SetActive(false);
 
@@ -77,6 +87,8 @@ public class Stage1Manager : MonoBehaviour
         BlockOffButton.SetActive(true);
 
         blocks.SetActive(true);
+        block1.SetActive(true);
+        block2.SetActive(true);
         //testBlock0.SetActive(true);
         //testBlock1.SetActive(true);
         //PrefabBlockL.SetActive(true);
@@ -128,6 +140,7 @@ public class Stage1Manager : MonoBehaviour
 
     public void GameClear()
     {
+        SceneController.CurrentSceneName();
         GameClearText.SetActive(true);
         ResuleScene();
     }

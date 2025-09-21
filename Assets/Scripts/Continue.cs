@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ResultManager : MonoBehaviour
+public class Cont : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,13 +16,10 @@ public class ResultManager : MonoBehaviour
         
     }
 
-    public void LoadStageSelectScene()
+    public void OnContinueButtonCliked()
     {
-        SceneManager.LoadScene("PlaySelectScene");
+        //直前のシーンに遷移する。
+        SceneController.BackToBeforeScene();
     }
 
-    public void LoadRetryScene()
-    {
-        
-    }
 }
