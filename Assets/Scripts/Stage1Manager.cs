@@ -43,13 +43,13 @@ public class Stage1Manager : MonoBehaviour
     //GameObject testBlock1;
     //GameObject testBlock2;
     public bool listClose = false;
-    BlockDragDrop blockDragDrop = new BlockDragDrop();
+    //BlockDragDrop blockDragDrop = new BlockDragDrop();
 
     // Start is called before the first frame update
     void Start()
     {
         BlockOffButton.SetActive(false);
-        blockDragDrop = GetComponent<BlockDragDrop>();
+        //blockDragDrop = GetComponent<BlockDragDrop>();
 
         //blocks = GameObject.Find("block_L");
         blocks = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
@@ -105,10 +105,10 @@ public class Stage1Manager : MonoBehaviour
         BlockList.SetActive(false);
         
         //éüâÒÇÕÇ±Ç±ÇèCê≥
-        if (blockDragDrop.isUse == false)
-        {
-            blocks.SetActive(false);
-        }
+        //if (blockDragDrop.isUse == false)
+        //{
+        //    blocks.SetActive(false);
+        //}
         
         //testBlock.SetActive(false);
 
