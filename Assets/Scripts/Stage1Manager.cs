@@ -55,6 +55,7 @@ public class Stage1Manager : MonoBehaviour
         blocks = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
         block1 = Instantiate(PrefabBlockT, new Vector3(5.5f, 3.48f, 0.0f), Quaternion.identity);
         block2 = Instantiate(PrefabBlockI, new Vector3(-2.5f, 3.48f, 0.0f), Quaternion.identity);
+        
         //testBlock0 = Instantiate(PrefabBlockL, new Vector3(1.54f, 3.48f, 0.0f), Quaternion.identity);
         //testBlock1 = Instantiate(PrefabBlockT, new Vector3(-2.5f, 3.48f, 0.0f), Quaternion.identity);
         //testBlock0.SetActive(false);

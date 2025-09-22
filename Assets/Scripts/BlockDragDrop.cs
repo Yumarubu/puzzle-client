@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockDragDrop : MonoBehaviour
 {
-    GameObject BlockList;
+    public GameObject BlockList;
     private Vector3 offset;
     private Vector3 screenPoint;
     public bool isUse;
